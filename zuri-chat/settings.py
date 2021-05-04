@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'zuri-chat.wsgi.application'
+# WSGI_APPLICATION = 'zuri-chat.wsgi.application'
 
 
 # Database
