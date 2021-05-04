@@ -51,8 +51,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cfehome.urls'
-ASGI_APPLICATION = 'cfehome.routing.application'
+ROOT_URLCONF = 'zuri-chat.urls'
+ASGI_APPLICATION = 'zuri-chat.routing.application'
 
 CHANNEL_LAYERS = {
     'default': {
@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cfehome.wsgi.application'
+WSGI_APPLICATION = 'zuri-chat.wsgi.application'
 
 
 # Database
