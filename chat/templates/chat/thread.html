@@ -2,7 +2,7 @@
 
 {% block content %}
 <h3>Your Chat With {% if user != object.first %}{{ object.first }}{% else %}{{ object.second }}{% endif %}</h3>
-<div id='chat-items chat'>
+<div id='chat-items' class="chat">
 {% for chat in object.chatmessage_set.all %}
       {% if chat.user == user %}
         <div class="friend">
@@ -21,22 +21,13 @@
 {% endfor %}
 </div>
 
-<div class="forms">
 	<form id='form' method='POST'> {% csrf_token %}
 		
 	{{form.as_p }}
 		<input type='submit' class='btn btn-primary chat-btn'/>
-	</form>
 </div>
-
-
-{% endblock %}
-
-{% block script %}
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.js"></script>
-
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 // websocket scripts
 console.log(window.location)
@@ -56,7 +47,7 @@ var socket = new ReconnectingWebSocket(endpoint)
 socket.onmessage = function(e){
 	console.log('message', e)
 	var chatData = JSON.parse(e.data)
-	chatHolder.append('<li>' + chatData.message + '</li>')
+	chatHolder.append(chatData.message)
 }
 
 socket.onopen = function(e){
@@ -83,3 +74,8 @@ socket.onclose = function(e){
 
 </script>
 {% endblock %}
+
+
+
+
+
