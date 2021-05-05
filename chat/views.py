@@ -1,13 +1,24 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import Http404, HttpResponseForbidden
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.generic.edit import FormMixin
 
 from django.views.generic import DetailView, ListView
 
-from .forms import ComposeForm
+from .forms import ComposeForm, UserForm
 from .models import Thread, ChatMessage
+
+def user(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            return redirect("thread", username=username)
+    else:
+        form = UserForm()
+    return render(request, 'chat/home.html', {'form' : form})
+
 
 
 class InboxView(LoginRequiredMixin, ListView):

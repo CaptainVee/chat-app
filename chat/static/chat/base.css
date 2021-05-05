@@ -55,7 +55,6 @@ input[type='text']{
   outline: 0;
   border-radius: 5px;
   width: 235px;
-  color : #A0A0A0;
 }
 
 button[type='submit']:hover{
@@ -86,7 +85,7 @@ button[type='submit']:hover #i{
   border : 1px solid #E2E2E2;
   margin: 15px 0 15px 860px;
   padding: 10px;
-  background: #FDFCF5;
+  background: #DCEAF7;
   border-radius: 6px;
   width: 180px;
   position: relative;
@@ -96,7 +95,7 @@ button[type='submit']:hover #i{
   border: 1px solid #BFE3EE;
   margin: 2px 51px 0 50px;
   padding: 10px;
-  background: #DCEAF7;
+  background: #FDFCF5;
   border-radius: 6px;
   position: relative;
   width: 160px;
@@ -106,14 +105,6 @@ button[type='submit']:hover #i{
   font-size: 14px;
 }
 
-.me p{
-  color : #6AA0F0;
-}
-
-
-.friend p{
-  color : #AEB0A4;
-}
 
 #i{
   font-size: 25px;

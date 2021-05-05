@@ -2,14 +2,25 @@
 
 {% block content %}
 
-<p class='lead'>Welcome Home</p>
-<a href="{% url 'register' %}">Sign Up to chat</a>
+<p class='lead'>Welcome to Zuri Chat</p>
+{% if user.is_authenticated %}
+	<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+	<a href="{% url 'register' %}">Sign Up to chat</a>
+{% endif %}
 
-<div>
-<p>go to /messages/{username of user to chat with}/
-</div>
 <div>
 Note: both users must be registered for you to chat</p>
 </div>
-<p> Better interface coming soon</p>
+<div>
+<p>You can chat with the admin user by login in an incognito window with the following details: Username = admin, Password = admin4321</p>
+</div>
+Who would you like to chat with?<br>
+<div class="forms">
+	<form id='form' method='POST'> {% csrf_token %}
+		
+	{{form.as_p }}
+		<input type='submit' class='btn btn-primary chat-btn'/>
+	</form>
+</div>
 {% endblock %}
