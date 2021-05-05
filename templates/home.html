@@ -3,5 +3,13 @@
 {% block content %}
 
 <p class='lead'>Welcome Home</p>
-<p>go to /messages/{username of user to chat with}/</p>
+<a href="{% url 'register' %}">Sign Up to chat</a>
+
+<div>
+<p>go to /messages/{username of user to chat with}/
+</div>
+<div>
+Note: both users must be registered for you to chat</p>
+</div>
+<p> Better interface coming soon</p>
 {% endblock %}
