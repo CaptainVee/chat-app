@@ -62,6 +62,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
+            # "hosts": [('localhost', 6379)],
             "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')]
         },
     },
@@ -137,6 +138,8 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'

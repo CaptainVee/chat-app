@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Gudea);
+
+body{
+  font-family: Gudea;
+  background : white;
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+a:hover i[class^='icon-'] , a:hover i[class*='icon-']{
+  color : #837D7D;
+}
+
+.container{
+  background-color: #d8d8d8;
+  margin: 40px auto;
+  position: relative;
+  border: 1px solid #CFCFCF;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.forms{
+  float: right;
+  padding-top: 70px;
+}
+
+.chat-btn{
+  margin-left: 240px;
+  margin-top: -105px;
+}
+
+.image{
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  background: #F7F9F9;
+  border: 1px solid #211410;
+  top: 89px;
+  left: 140px;
+  border-radius: 50%;
+}
+
+.chat{
+  background-color: : black;
+  position: relative;
+  width: 403px;
+}
+
+input[type='text']{
+  border: 1px solid #CED3D9;
+  margin-right: 80px;
+  padding: 10px;
+  outline: 0;
+  border-radius: 5px;
+  width: 235px;
+  color : #A0A0A0;
+}
+
+button[type='submit']:hover{
+  cursor: pointer;
+}
+
+button[type='submit']:hover #i{
+  color : #fff;
+}
+
+
+
+.friend img , .me img{
+  border-radius: 2px;
+} 
+
+.friend img{
+  float: left;
+  margin: 10px 0 0 7px;
+}
+
+.me img{
+  float: right;
+  margin: 10px 7px 0 ;
+}
+
+.friend .message{
+  border : 1px solid #E2E2E2;
+  margin: 15px 0 15px 860px;
+  padding: 10px;
+  background: #FDFCF5;
+  border-radius: 6px;
+  width: 180px;
+  position: relative;
+}
+
+.me .message{
+  border: 1px solid #BFE3EE;
+  margin: 2px 51px 0 50px;
+  padding: 10px;
+  background: #DCEAF7;
+  border-radius: 6px;
+  position: relative;
+  width: 160px;
+}
+
+.friend p , .me p{
+  font-size: 14px;
+}
+
+.me p{
+  color : #6AA0F0;
+}
+
+
+.friend p{
+  color : #AEB0A4;
+}
+
+#i{
+  font-size: 25px;
+  color: #E8E8E8;
+  display: block;
+  margin-top: 4px;
+  -webkit-transition : all .25s ease;
+  -moz-transition : all .25s ease;
+}
+
+.Description , .Link{
+  width:402px;
+  height:282px;
+  float:left;
+  padding: 10px 0;
+  background : -webkit-linear-gradient(rgb(242, 242, 243) 15%, rgb(240, 243, 241) 36%, rgb(241, 240, 241) 58%, rgb(236, 236, 236) 81%);
+  background : -moz-linear-gradient(rgb(242, 242, 243) 15%, rgb(240, 243, 241) 36%, rgb(241, 240, 241) 58%, rgb(236, 236, 236) 81%);
+}
+
+.Description  p {
+  margin : 60px 0;
+  text-align: center;
+  line-height: 30px;
+  color: #535252;
+  font-size: 18px;
+}
+
+
+
+ul{
+  width: inherit;
+  height: inherit;
+  list-style: none;
+}
+

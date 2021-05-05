@@ -1,6 +1,83 @@
-{% extends "base.html" %}
+{% extends "chat/base.html" %}
 
 {% block content %}
+<div class="container">
+
+    <div class="bg-image">
+      <h3>Mostafa Hassani</h3>
+    </div>
+
+      <div class='followe'>
+        <ul>
+          <li><a href="#">
+            <span id='number'>45</span>
+            <span id='followe'>Followers</span>
+          </a></li>
+          <li><a href="#">
+            <span id='number'>5</span>
+            <span id='followe'>Following</span>
+          </a></li>
+          <div class="badboy"></div>
+        </ul>
+      </div>
+
+    <div class="image"></div>
+
+    <input type="radio" id='one' name='contorol' checked/> 
+    <label for="one"><i class='icon-comments-alt'></i></label>
+    <input type="radio" id='two' name='contorol' />
+    <label for="two"><i class='icon-user'></i></label>
+    <input type="radio" id='three' name='contorol' /> 
+    <label for="three"><i class='icon-link'></i></label>
+    
+<div class="all">
+    <div class="chat">
+      <div class="show-message">
+        <div class="friend">
+          <img src="http://i.cubeupload.com/c6AJ19.png" width=32 height=32 />
+          <div class="message">
+            <p>Hi. Am searching for something about Css.
+              would you mind helping me to find out?</br>
+            </p>
+          </div>
+        </div>
+        <div class="me">
+          <img src="http://i.cubeupload.com/nD0XUv.png" width=32 height=32 />
+          <div class="message">
+            <p>Hi dear</br>
+            of course if i can ...</p>
+          </div>
+        </div>        
+        <div class="badboy"></div>
+      </div>
+      <div class="type-text">
+        <input type="text" placeholder='Chat with Mostafa...' />
+        <button type='submit'><i id='i' class='icon-comments-alt'></i></button>
+      </div>
+    </div>
+
+    <div class="Description">
+      <p>My name is Mostafa Hasani.</br>
+        I'm in love with Html,Css and anything about front-end web.</br>
+        I like sports too...</br>
+        because healthy mind is in healthy body.
+      </p>
+    </div>
+
+    <div class="Link">
+      <div class="menu">
+        <ul>
+          <li><a href="">codepen.io/Hassani</a></li>
+          <li><a href="">github.com/yegane</a></li>
+          <li><a href="">seyedmostafahassani@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="badboy"></div>
+  </div>
+</div>
 
 
+Resources
 {% endblock %}

@@ -1,19 +1,34 @@
-{% extends "base.html" %}
+{% extends "chat/base.html" %}
 
 {% block content %}
 <h3>Thread for {% if user != object.first %}{{ object.first }}{% else %}{{ object.second }}{% endif %}</h3>
-<ul id='chat-items'>
+<div id='chat-items chat'>
 {% for chat in object.chatmessage_set.all %}
-
-<li>{{ chat.message }} via {{ chat.user }}</li>
+      {% if chat.user == user %}
+        <div class="me">
+          <div class="message">
+          		<p>{{ chat.message }} {{ chat.user }}</p>
+          </div>
+         </div>
+      {% else %}
+       <div class="friend">
+          <div class="message">
+          		<p>{{ chat.message }} {{ chat.user }}</p>
+          </div>
+         </div>
+       {% endif %}
 
 {% endfor %}
-</ul>
+</div>
 
-<form id='form' method='POST'> {% csrf_token %}
-{{form.as_p }}
-<input type='submit' class='btn btn-primary'/>
-</form>
+<div class="forms">
+	<form id='form' method='POST'> {% csrf_token %}
+		
+	{{form.as_p }}
+		<input type='submit' class='btn btn-primary chat-btn'/>
+	</form>
+</div>
+
 
 {% endblock %}
 
@@ -64,5 +79,7 @@ socket.onerror = function(e){
 socket.onclose = function(e){
 	console.log('close', e)
 }
+
+
 </script>
 {% endblock %}
