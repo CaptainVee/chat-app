@@ -65,7 +65,10 @@ button[type='submit']:hover #i{
   color : #fff;
 }
 
-
+.met{
+  background-color: blue;
+  color: red;
+}
 
 .friend img , .me img{
   border-radius: 2px;

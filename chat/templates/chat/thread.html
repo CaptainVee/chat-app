@@ -47,7 +47,7 @@ var socket = new ReconnectingWebSocket(endpoint)
 socket.onmessage = function(e){
 	console.log('message', e)
 	var chatData = JSON.parse(e.data)
-	chatHolder.append(chatData.message)
+	chatHolder.append('<div class="met">' + chatData.message + '</div>')
 }
 
 socket.onopen = function(e){
