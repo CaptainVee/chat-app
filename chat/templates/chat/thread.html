@@ -7,13 +7,13 @@
       {% if chat.user == user %}
         <div class="friend">
           <div class="message">
-          		<p>{{ chat.message }}</p>
+          		<p>{{ chat.message }} from {{ chat.user }}</p>
           </div>
          </div>
       {% else %}
        <div class="me">
           <div class="message">
-          		<p>{{ chat.message }}</p>
+          		<p>{{ chat.message }} from {{ chat.user }}</p>
           </div>
          </div>
        {% endif %}
@@ -47,7 +47,8 @@ var socket = new ReconnectingWebSocket(endpoint)
 socket.onmessage = function(e){
 	console.log('message', e)
 	var chatData = JSON.parse(e.data)
-	chatHolder.append('<div class="met">' + chatData.message + '</div>')
+	// document.querySelector('#id_message').value += (chatData.message + '\n');
+	chatHolder.append('<div class="met">' + chatData.message + "   from " + chatData.username+ '</div>')
 }
 
 socket.onopen = function(e){
