@@ -13,6 +13,7 @@ a:hover i[class^='icon-'] , a:hover i[class*='icon-']{
 }
 
 .container{
+  max-width: 650px;
   background-color: #d8d8d8;
   margin: 40px auto;
   position: relative;
@@ -40,12 +41,6 @@ a:hover i[class^='icon-'] , a:hover i[class*='icon-']{
   top: 89px;
   left: 140px;
   border-radius: 50%;
-}
-
-.chat{
-  background-color: : black;
-  position: relative;
-  width: 403px;
 }
 
 input[type='text']{
@@ -91,7 +86,8 @@ button[type='submit']:hover #i{
 
 .friend .message{
   border : 1px solid #E2E2E2;
-  margin: 15px 0 15px 860px;
+  margin-left: auto;
+  margin-bottom: 2%;
   padding: 10px;
   background: #DCEAF7;
   border-radius: 6px;
@@ -101,7 +97,7 @@ button[type='submit']:hover #i{
 
 .me .message{
   border: 1px solid #BFE3EE;
-  margin: 2px 51px 0 50px;
+  margin-bottom: 2%;
   padding: 10px;
   background: #FDFCF5;
   border-radius: 6px;
